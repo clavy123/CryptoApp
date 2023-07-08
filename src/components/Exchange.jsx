@@ -46,7 +46,6 @@ const Exchange = () => {
   const [loading, setloading] = useState(true);
   const fetchExchange = async () => {
     const { data } = await axios.get(`${import.meta.env.VITE_APP_SERVER}/exchanges`);
-    console.log(data);
     setexchange(data);
     setloading(false);
   };

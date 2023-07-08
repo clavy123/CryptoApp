@@ -49,7 +49,6 @@ const Coin = () => {
   const [loading, setloading] = useState(true);
   const fetchCoin = async () => {
     const { data } = await axios.get(`${import.meta.env.VITE_APP_SERVER}/coins/markets/?vs_currency=inr`);
-    console.log(data);
     setCoin(data);
     setloading(false);
   };

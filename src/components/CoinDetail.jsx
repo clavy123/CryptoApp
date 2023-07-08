@@ -38,7 +38,7 @@ const CoinDetail = () => {
   const [loading, setLoading] = useState(true);
   const fectchCoinDetail = async (id) => {
     const { data } = await axios.get(`${import.meta.env.VITE_APP_SERVER}/coins/${id}`);
-    console.log(data)
+   
     setCoin(data);
     setLoading(false);
   };
